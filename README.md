@@ -1,6 +1,7 @@
 <div align="center">
 
-## README Obfuscator 🛡️
+![obfs22](https://github.com/user-attachments/assets/e62f06b1-c643-45c4-b373-3d081d786db3)
+
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Status](https://img.shields.io/badge/Status-Active-green)

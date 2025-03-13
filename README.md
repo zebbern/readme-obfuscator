@@ -33,9 +33,23 @@ python3 obfuscate.py readme.md obfuscated_readme.md
 ```
 
 ## 🛠 How It Works
-- Inserts **invisible Unicode characters** (`​`, `‌`, `‍`, etc.).
-- **Preserves Markdown formatting** for proper rendering.
-- **Adds hidden HTML attributes** to further obfuscate the source.
+```
+This script reads a Markdown file (e.g. a GitHub README.md)
+and injects a huge amount of "waste" (random invisible characters)
+into its text so that if someone copy‐pastes the content they get extra junk.
+Waste is interleaved only into "normal text" (excluding code blocks,
+links/images/HTML tags and key Markdown structural markers) so that the rendered
+output on GitHub remains unchanged.
 
+Special notes:
+    • Horizontal rules (lines with 3+ dashes) are preserved and isolated.
+    • Waste is injected in high amounts (20–50 random invisible characters per non‐whitespace character).
+    • Multiple hidden HTML snippet blocks with randomized attribute values are appended.
+    • Additionally, a fixed snippet block (with provided values) is appended.
+    • Extra random attributes (such as id, data-rand, alt, target, aria-label, viewBox, version)
+      are added to nearly every HTML element to obfuscate the source.
+    • The waste characters include a diverse mix of Unicode control characters and zero‐width joiners/non‐joiners.
+      (Note: The right‐to‐left mark, which flips characters, has been removed.)
+```
 
 🚀 **Protect your README today!**
